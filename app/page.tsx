@@ -6,7 +6,7 @@ const VCardQRCode = () => {
 
   return (
     <div className="m-4">
-      <QRCode value={`http://192.168.1.51:3000/scan`} size={600} level="H"/>
+      <QRCode value={`https://nextjs-swart-beta-51.vercel.app/scan`} size={600} level="H"/>
       
     </div>
   );
