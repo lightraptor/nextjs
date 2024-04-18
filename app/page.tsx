@@ -9,7 +9,7 @@ const VCardQRCode = () => {
 {/*       <Image src={img} width={500} height={500} alt="bg" /> */}
       <p align="center" className="text-5xl bold">Wabi-Sabi</p>
       <p align="center">Khiếm khuyết một cách hoàn hảo (hiện tại là với cái web này)</p>
-      <p>"Nothing about us without us"</p>
+      <p>'Nothing about us without us'</p>
       <button className="bg-black text-white w-1/4 p-3 mb-3"><a href="https://form.jotform.com/241032420358445">English Survey</a></button>
       
 <button className="bg-black text-white w-1/4 p-3"><a href="https://form.jotform.com/241073918354458">Khảo sát Tiếng Việt</a></button>      
