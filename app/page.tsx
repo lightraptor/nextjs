@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from 'next/image'; // Import the Image component
-import carot from '@/app/thichcarot.jpg'
+// import carot from '@/app/thichcarot.jpg'
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       </div>
       {/* Insert the image here */}
       <div className="image-wrap w-full h-fit flex justify-center items-center">
-        <Image src={carot} alt="Thich Carot" width={500} height={500} />
+        <Image src={"https://github.com/lightraptor/nextjs/blob/main/app/thichcarot.jpg"} alt="Thich Carot" width={500} height={500} />
       </div>
       <div className="content-wrap flex flex-col gap-3">
         <p className="sm:text-3xl text-xl font-normal tracking-wide text-center">Khiếm khuyết một cách hoàn hảo (hiện tại là với cái web này)</p>
