@@ -5,8 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --color1: #eee;
-    --color2: #222831;
+    --color1: #f4efee;
+    --color2: #352a29;
 }
 
 body {
@@ -15,4 +15,9 @@ body {
     padding: 0;
     background-color: var(--color1);
     color: var(--color2);
+}
+
+.button-item {
+    background-color: var(--color2);
+    color: var(--color1);
 }
