@@ -6,6 +6,8 @@ import { Grid, Typography, Box } from "@mui/material";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import { Category, Item } from "@/app/types";
 import ShowDialog from "./ShowDialog";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 interface CategoryListProps {
   categories: Category[];
@@ -45,23 +47,36 @@ const CategoryList: React.FC<CategoryListProps> = ({ categories, items }) => {
               flexDirection: "column",
               alignItems: "center",
             }}
-            onClick={() => handleOpenDialog(category.name, items.filter((item) => item.categoryId === category.id))}
           >
-            <Box className="item-icon">
-              <AutoStoriesIcon />
-            </Box>
-            <Typography variant="body1" gutterBottom>
-              {category.name}
-            </Typography>
+            <Link href={"list-record"}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    border: "2px solid #352A29",
+                    borderRadius: "50%",
+                    width: "fit-content",
+                    padding: 2,
+                  }}
+                >
+                  <AutoStoriesIcon sx={{ color: "#352A29" }} />
+                </Box>
+                <Typography variant="body1" gutterBottom>
+                  {category.name}
+                </Typography>
+              </Box>
+            </Link>
           </Grid>
         ))}
       </Grid>
-      <ShowDialog
-        open={openDialog}
-        onClose={() => setOpenDialog(false)}
-        listItem={selectValue.items}
-        title={selectValue.title}
-      />
     </>
   );
 };
